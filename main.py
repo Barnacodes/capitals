@@ -1,22 +1,23 @@
 #! /usr/bin/env python3\
 
-'''In the main.py we are importing the module check from mypackage'''
+'''In the main.py we are importing the module check 
+from mypackage'''
       
 from CapitalsFolder import capitals
 
 import sys
 
 
-if _name_ == "_main_":
+if __name__ == "__main__":
     if len(sys.argv) > 1:
         if sys.argv[1] == 'check':
-            capitalscopia.check_capital("Germany")
-            capitalscopia.check_capital("Honduras")
-            capitalscopia.check_state("Rome")
-            capitalscopia.check_state("Tokyo")
+            capitals.check_capital("Germany")
+            capitals.check_capital("Honduras")
+            capitals.check_state("Rome")
+            capitals.check_state("Tokyo")
         else:
-            capitalscopia.check_state(sys.argv[1])
-            capitalscopia.check_capital(sys.argv[1])
+            capitals.check_state(sys.argv[1])
+            capitals.check_capital(sys.argv[1])
 
 
 
