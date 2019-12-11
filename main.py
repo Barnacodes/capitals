@@ -1,10 +1,15 @@
 #! /usr/bin/env python3\
 
 
-from CapitalsFolder import capitals
+#from CapitalsFolder import capitals
 
 import argparse
+import csv
 
+from CapitalsFolder.csvcode import check_input
+
+csv_folder = 'CapitalsFolder/capitals.csv'
+csv_reader = csv.reader(open(csv_folder, 'r'))
 
 def parse_arguments():
     parser = argparse.ArgumentParser()
@@ -18,5 +23,6 @@ def parse_arguments():
 
 if __name__ == '__main__':
     args = parse_arguments()
-    capitals.check_capital(args)
-    capitals.check_state(args)
+    #capitals.check_capital(args)
+    #capitals.check_state(args)
+    check_input(args.name)
