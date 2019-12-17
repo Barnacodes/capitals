@@ -24,7 +24,37 @@ USERNAME has been correctly inserted in ourdatabase
 
 So far so good? Let’s move forward.
 
-Exit from the folder ‘scripts and run the file ```main.py``` by checking whether you have the authorisation to have access to data. Now, you are probably asking yourself how to do this: you simply insert *username* and *password* again followed by the capital or country you are interested in but be careful, the arguments you need are now ```-c``` for your username and ```-p``` for your password.
+Exit from the folder ‘scripts and run the file ```main.py``` by checking whether you have the authorisation to have access to data. Now, you are probably asking yourself how to do this: you simply insert *username* and *password* again followed by the capital or country you are interested in but be careful, the arguments you need are now -c for your username and -p for your password.
 ```
 python3 main.py -c USERNAME -p PASSWORD Rome
 ```
+## Commands and line parameters
+ 
+* -a insert username
+* -p password if correct and present in ```ourdatabase.db```
+* -c check the username  if correct and present in ```ourdatabase.db```
+* -p check if correct and present in ```ourdatabase.db```
+
+# Verbosity
+
+About CAPITALS:
+
+* level 0
+"Returns the state of the input capital"
+
+* level 1
+"The capital of 'state' is 'your input' "
+
+* level 2
+" We are checking your input in order to understand if it is contained in the list of capitals, The capital of 'state' is 'your input' "
+
+About STATES
+
+* level 0
+"Returns the capital of the input state"
+
+* level 1
+"The European state whose capital is 'capital' is 'your input' "
+
+* level 2
+ "We are checking your input in order to understand if it is contained in the list of capitals, The European state whose capital is 'capital' is 'your input' "
