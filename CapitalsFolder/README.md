@@ -8,7 +8,11 @@ This paper will guide you throughout the acknowledgment of how using this useful
 
 Open the terminal from your computer, clone the repository forked by 'barnacodes'and move to the directory *capitals*. 
 Here you can find the folder ‘tests’ which contains the file ‘test’ charged to test the whole code.  
-If the test succeed, you can then move forward to the folder *scripts* where you can find the file ```dbmanager.py``` where you will insert a *username* and a *password* as follows
+If the test succeed, you can then move forward to the folder *scripts* where you can find the file ```dbmanager.py``` where you will insert a *username* and a *password* as follows:
+```
+Python dbmanager.py -a username -p password 
+```
+
 
 *Commands*
 
