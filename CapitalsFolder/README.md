@@ -15,3 +15,16 @@ If the test succeed you can then move forward to the folder ‘scripts’ where 
 * -a *username*
 * -p *password*
 
+If you have done everything properly the following mssage will appear:
+```
+USERNAME has been correctly inserted in ourdatabase
+```
+
+## 2. Run the Program
+
+So far so good? Let’s move forward.
+
+Exit from the folder ‘scripts and run the file ```main.py``` by checking whether you have the authorisation to have access to data. Now, you are probably asking yourself how to do this: you simply insert *username* and *password* again followed by the capital or country you are interested in but be careful, the arguments you need are now ```-c``` for your username and ```-p``` for your password.
+```
+python3 main.py -c USERNAME -p PASSWORD Rome
+```
