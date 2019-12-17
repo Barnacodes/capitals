@@ -1,14 +1,17 @@
-## Implementation of a Database of European capitals
+# The European Capitals Source
 
+It’s quite common to forget the capitals of all countries of Europe. You are going to learn about a simple but powerful tool that can help you solve the before mentioned issue which works with an intuitive question/answer method.
 
-In this repository you can find a file named ```capitals.py``` that implements the ```check_capital``` and ```check_state``` functions. These functions check if the given input is a valid name of an European capital city, or state respectively. They are used in the ```main.py``` file to test if some cities and states are in Europe. If you run the program, executing the main file with: ```python main.py``` it will  give you the following results:
+This paper will guide you through the acknowledgment of how using this useful program. Let’s now get to the point and please, follow all the steps listed below:
 
-```
-$ python main.py
-The capital of Germany is Berlin
-Sorry, Honduras does not seem to be an European state
-The European state whose capital is Rome is Italy
-Sorry, Tokyo is not the capital of any European state
+## 1. How to populate the database
 
-```
+Open the terminal from your computer and access the directory ‘capitals’. 
+Here you can find the folder ‘tests’ which contains the file ‘test’ charged to test the whole code.  
+If the test succeed you can then move forward to the folder ‘scripts’ where you can find the file ```dbmanager.py``` where you will insert a *username* and a *password* as follows
+
+*Commands*
+
+* -a *username*
+* -p *password*
 
