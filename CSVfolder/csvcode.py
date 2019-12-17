@@ -5,14 +5,13 @@ import csv
 input basis, it will return the Capital or the State'''
 
 
-def check_input(input_1):
-    with open('CapitalsFolder/capitals.csv', 'r') as f:
+def get_capital_or_state(name):
+    with open('CSVfolder/capitals.csv', 'r') as f:
         csv_reader = csv.reader(f, delimiter=',')
         for row in csv_reader:
-            if row[0] == input_1:
-                print("The capital of {} is {}".format(input_1, row[1]))
-            elif row[1] == input_1:
-                print("The European state whose capital is {}",
-                      "is {} ".format(input_1, row[0]))
+            if row[1] == name:
+                return row[0]
+            elif row[0] == name:
+                return row[1]
             else:
                 continue
