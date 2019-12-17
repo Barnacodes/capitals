@@ -1,5 +1,8 @@
-'''Here we have a dictionary in which there is a list.
-In this list, each line is composed by a state(key) and his capital(value)'''
+'''
+Here we have a dictionary in which there is a list.
+In this list, each line is composed by a state(key) and his capital(value)
+
+'''
 
 list_of_capitals = {'Aland Islands': 'Mariehamn',
                     'Albania': 'Tirana',
@@ -60,47 +63,61 @@ list_of_capitals = {'Aland Islands': 'Mariehamn',
                     'United Kingdom': 'London',
                     'Vatican City': 'Vatican City'}
 
-''' The below functions check the given input
-    return the State or the Capital.
-    They also allow to add different degrees of
-    verbosity depending on how much we want the
-    output to be deepened '''
+'''
+The below functions check the given input
+return the State or the Capital.
+They also allow to add different degrees of
+verbosity depending on how much we want the
+output to be deepened
+
+'''
 
 
 def check_capital(args):
-    state = ''
-    for country, capital in list_of_capitals.items():
-        if capital == args.name:
-            state = country
-    if args.name in list_of_capitals.values():
+    state = get_capital(args.name)
+    if state:
         if args.verbosity >= 2:
             print('entrato')
-            print("We are checking your input in order",
-                  "to understand if it is contained in",
-                  "the list of capitals... \nThe capital",
-                  "of {} is {}".format(state, args.name))
+            print(" We are checking your input in order to",
+                  "understand if it is contained in the list of capitals, ",
+                  "The capital of {} is {}".format(state, args.name))
         elif args.verbosity >= 1:
             print("The capital of {} is {}".format(state, args.name))
         else:
             print(state)
-    elif capital not in list_of_capitals.values():
-        print("Sorry, {} is not the capital",
-              "of any European state".format(args.name))
+    else:
+        print("Sorry, {} is not the capital of any",
+              " European state".format(args.name))
+
+
+def get_capital(name):
+    state = ''
+    for country, capital in list_of_capitals.items():
+        if capital == name:
+            state = country
+    return state
 
 
 def check_state(args):
+    capital = get_state(args.name)
+    if capital:
+        if args.verbosity >= 2:
+            print(" We are checking your input in order to ",
+                  "understand if it is contained in the list ",
+                  "of capitals,The European state whose capital",
+                  " is {} is {}".format(capital, state))
+        elif args.verbosity >= 1:
+            print("The European state whose capital ",
+                  "is {} is {}".format(capital, args.name))
+        else:
+            print(capital)
+    else:
+        print("Sorry, {} is not a European state".format(capital))
+
+
+def get_state(name):
+    cap = ''
     for state, capital in list_of_capitals.items():
-        if state == args.name:
-            if args.verbosity >= 2:
-                print("We are checking your input",
-                      "in order to understand if it",
-                      "is contained in the list of",
-                      "capitals... \nThe European state",
-                      "whose capital is {} is {}".format(capital, state))
-            elif args.verbosity >= 1:
-                print("The European state whose capital",
-                      "is {} is {}".format(capital, state))
-            else:
-                print(capital)
-        elif state not in list_of_capitals.keys():
-            print("Sorry, {} is not a European state".format(capital))
+        if state == name:
+            cap = capital
+    return cap
